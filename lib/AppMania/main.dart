@@ -6,8 +6,8 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: "/",
     routes: {
-      "/": (context) => HomePage(),
-      "detailPage": (context) => DetailPage(),
+      "/": (context) => const HomePage(),
+      "detailPage": (context) => const DetailPage(),
     },
   ));
 }
@@ -33,66 +33,70 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
               child: Row(
                 children: [
-                  SizedBox(width: 10),
-                  Icon(Icons.location_on_rounded),
-                  SizedBox(width: 4),
-                  Text(
+                  const SizedBox(width: 10),
+                  const Icon(Icons.location_on_rounded),
+                  const SizedBox(width: 4),
+                  const Text(
                     "Habiganj City",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 180,
                   ),
                   Container(
                     height: 50,
                     width: 50,
-                    child: Icon(
+                    child: const Icon(
                       Icons.menu,
                       size: 35,
                     ),
                     decoration: BoxDecoration(
-                        color: Color(0xffF4F4F4),
+                        color: const Color(0xffF4F4F4),
                         borderRadius: BorderRadius.circular(50)),
                   )
                 ],
               ),
             ),
             Align(
-              alignment: Alignment(-0.6, 0.0),
+              alignment: const Alignment(-0.6, 0.0),
               child: RichText(
-                text: TextSpan(style: TextStyle(color: Colors.black), children: [
-                  TextSpan(
-                    text: ("Find The"),
-                    style: TextStyle(
-                      fontSize: 30,
-                    ),
-                  ),
-                  TextSpan(
-                    text: (" Best"),
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                  ),
-                  TextSpan(
-                    text: ("\nFood"),
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                  ),
-                  TextSpan(
-                    text: (" Around You"),
-                    style: TextStyle(
-                      fontSize: 30,
-                    ),
-                  ),
-                ]),
+                text: const TextSpan(
+                    style: TextStyle(color: Colors.black),
+                    children: [
+                      TextSpan(
+                        text: ("Find The"),
+                        style: TextStyle(
+                          fontSize: 30,
+                        ),
+                      ),
+                      TextSpan(
+                        text: (" Best"),
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      TextSpan(
+                        text: ("\nFood"),
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      TextSpan(
+                        text: (" Around You"),
+                        style: TextStyle(
+                          fontSize: 30,
+                        ),
+                      ),
+                    ]),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Container(
               height: 60,
               width: 320,
               decoration: BoxDecoration(
-                color: Color(0xffF4F4F4),
+                color: const Color(0xffF4F4F4),
                 borderRadius: BorderRadius.circular(40),
               ),
-              child: Row(
+              child: const Row(
                 children: [
                   SizedBox(width: 15),
                   Icon(Icons.search_sharp),
@@ -103,11 +107,11 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Align(
-              alignment: Alignment(-0.9, 0.0),
+              alignment: const Alignment(-0.9, 0.0),
               child: RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   children: [
                     TextSpan(
                       text: ("Find"),
@@ -129,10 +133,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               children: [
-                SizedBox(width: 30),
+                const SizedBox(width: 30),
                 Container(
                   height: 50,
                   width: 100,
@@ -140,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.lightGreen,
                     borderRadius: BorderRadius.circular(40),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Salads",
                       style: TextStyle(
@@ -151,15 +155,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(width: 30),
+                const SizedBox(width: 30),
                 Container(
                   height: 50,
                   width: 100,
                   decoration: BoxDecoration(
-                    color: Color(0xffF4F4F4),
+                    color: const Color(0xffF4F4F4),
                     borderRadius: BorderRadius.circular(40),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Hot Sale",
                       style: TextStyle(
@@ -170,15 +174,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(width: 30),
+                const SizedBox(width: 30),
                 Container(
                   height: 50,
                   width: 100,
                   decoration: BoxDecoration(
-                    color: Color(0xffF4F4F4),
+                    color: const Color(0xffF4F4F4),
                     borderRadius: BorderRadius.circular(40),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Popularity",
                       style: TextStyle(
@@ -237,18 +241,18 @@ class Product extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Container(
             height: 464,
             width: 180,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Color(0xffF4F4F4),
+              color: const Color(0xffF4F4F4),
             ),
             child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 120, top: 10),
+                const Padding(
+                  padding: EdgeInsets.only(left: 120, top: 10),
                   child: Icon(Icons.favorite_border_rounded),
                 ),
                 InkWell(
@@ -264,32 +268,32 @@ class Product extends StatelessWidget {
                   ),
                 ),
                 Align(
-                  alignment: Alignment(-0.4, -1.5),
+                  alignment: const Alignment(-0.4, -1.5),
                   child: Column(
                     children: [
                       Text(
                         pro_name ?? "",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Row(
                         children: [
-                          SizedBox(width: 30),
+                          const SizedBox(width: 30),
                           Text(
                             pro_min ?? "",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.grey,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(width: 30),
-                          Icon(
+                          const SizedBox(width: 30),
+                          const Icon(
                             Icons.star_border_outlined,
                             color: Colors.yellow,
                           ),
-                          Text(
+                          const Text(
                             "4.5",
                             style: TextStyle(
                               color: Colors.grey,
@@ -298,14 +302,14 @@ class Product extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Stack(
                         children: [
                           Align(
-                            alignment: Alignment(-0.5, 0.0),
+                            alignment: const Alignment(-0.5, 0.0),
                             child: Text(
                               "\$${pro_price}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -316,14 +320,14 @@ class Product extends StatelessWidget {
                             child: Container(
                               height: 43,
                               width: 50,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0xff5CC24A),
                                 borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(30),
                                   bottomRight: Radius.circular(20),
                                 ),
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.add,
                                 color: Colors.white,
                               ),
@@ -342,32 +346,32 @@ class Product extends StatelessWidget {
                   ),
                 ),
                 Align(
-                  alignment: Alignment(-0.4, -1.5),
+                  alignment: const Alignment(-0.4, -1.5),
                   child: Column(
                     children: [
                       Text(
                         pro_name ?? "",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Row(
                         children: [
-                          SizedBox(width: 30),
+                          const SizedBox(width: 30),
                           Text(
                             pro_min ?? "",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.grey,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(width: 30),
-                          Icon(
+                          const SizedBox(width: 30),
+                          const Icon(
                             Icons.star_border_outlined,
                             color: Colors.yellow,
                           ),
-                          Text(
+                          const Text(
                             "4.5",
                             style: TextStyle(
                               color: Colors.grey,
@@ -376,14 +380,14 @@ class Product extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Stack(
                         children: [
                           Align(
-                            alignment: Alignment(-0.5, 0.0),
+                            alignment: const Alignment(-0.5, 0.0),
                             child: Text(
                               "\$${pro_price}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -394,14 +398,14 @@ class Product extends StatelessWidget {
                             child: Container(
                               height: 43,
                               width: 50,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0xff5CC24A),
                                 borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(30),
                                   bottomRight: Radius.circular(20),
                                 ),
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.add,
                                 color: Colors.white,
                               ),
